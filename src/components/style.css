@@ -1,0 +1,47 @@
+:root {
+  --main-bg-color: #333333;
+  --main-color: yellow;
+}
+
+.flex_numbers {
+  display: flex;
+  list-style: none;
+}
+
+.page_numbers {
+  list-style: none;
+  background-color: #dddd;
+  border-right: 1px solid rgb(163, 158, 158);
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.page_numbers:hover,
+.btn:hover {
+  background-color: white;
+}
+
+.page_numbers::selection {
+  background-color: white;
+}
+.is_active {
+  background-color: white;
+}
+.btn {
+  padding: 1rem;
+  cursor: pointer;
+  background-color: var(--main-color);
+  border: 1px solid rgb(163, 158, 158);
+}
+
+.button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 1rem;
+  font-size: 16px;
+}
