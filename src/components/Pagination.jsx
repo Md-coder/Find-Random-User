@@ -18,7 +18,7 @@ const Pagination = ({
   return (
     <>
       <ul className='flex_numbers'>
-        <button className='btn' onClick={() => handlePrev()}>
+        <button className='btn' onClick={() => handlePrev()} disabled={pageNumber === 1}>
           Prev &#8592;
         </button>
         {pageNumbers.map((number) => (
@@ -30,7 +30,11 @@ const Pagination = ({
             <p style={{ textDecoration: 'none', color: 'black' }}>{number}</p>
           </li>
         ))}
-        <button className='btn' onClick={() => handleNext(pageNumbers.length)}>
+        <button
+          className='btn'
+          onClick={() => handleNext(pageNumbers.length)}
+          disabled={pageNumber === pageNumbers.length}
+        >
           Next &#8594;
         </button>
       </ul>
