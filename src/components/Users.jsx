@@ -33,7 +33,7 @@ const Users = () => {
     const randomUser = async () => {
       setLoading(true);
       const response = await fetch('https://randomuser.me/api/?results=200');
-      if (response.status === 401) {
+      if (response.status === 404) {
         window.location('/notFound');
       } else {
         response.json().then((data) => {
